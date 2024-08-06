@@ -16,7 +16,7 @@
                 </Column>
             </columns>
             <items>
-    <!--adicionar -->
+    
                 <ColumnListItem>
                   <cells>
                         <Input value="{Value1}" editable="{/editable}"/>
@@ -24,7 +24,7 @@
                     </cells>
 
                 </ColumnListItem>
-    <!--adicionar mais -->
+   
             </items>
         </Table>
      

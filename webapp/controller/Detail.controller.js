@@ -18,7 +18,12 @@ sap.ui.define([
     onBotoDeAlertaButtonPress: function() {
       sap.m.MessageToast.show("Alerta!");
     },
-
-
+          onSideNavButtonPress: function(oEvent) {
+           
+              var oSideNavigation = this.byId("sideNavigation");
+            
+              var bExpanded = oSideNavigation.getExpanded();
+              oSideNavigation.setExpanded(!bExpanded);
+          },
   });
 });

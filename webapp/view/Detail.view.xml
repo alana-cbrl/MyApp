@@ -9,56 +9,33 @@
 
     <tnt:header>
       <tnt:ToolHeader>
+
         <Button
           id="sideNavigationToggleButton"
           icon="sap-icon://menu2"
           type="Transparent"
-          press=".onSideNavButtonPress">
+          press=".onSideNavButtonPress"
+          expanded="true"
+          >
           <layoutData>
             <OverflowToolbarLayoutData priority="NeverOverflow" />
           </layoutData>
         </Button>
+
         <ToolbarSpacer width="20px" />
+        
         <Button text="Primeira Página" type="Transparent" press="onNavBack">
           <layoutData>
             <OverflowToolbarLayoutData priority="Low" />
           </layoutData>
         </Button>
+
         <Button text="Segunda página" type="Transparent" press="onNavSecond">
           <layoutData>
             <OverflowToolbarLayoutData priority="Low" />
           </layoutData>
         </Button>
-        <Button text="View" type="Transparent">
-          <layoutData>
-            <OverflowToolbarLayoutData priority="Low" />
-          </layoutData>
-        </Button>
-        <Button text="Navigate" type="Transparent">
-          <layoutData>
-            <OverflowToolbarLayoutData priority="Low" />
-          </layoutData>
-        </Button>
-        <Button text="Code" type="Transparent">
-          <layoutData>
-            <OverflowToolbarLayoutData priority="Low" />
-          </layoutData>
-        </Button>
-        <Button text="Refactor" type="Transparent">
-          <layoutData>
-            <OverflowToolbarLayoutData priority="Low" />
-          </layoutData>
-        </Button>
-        <Button text="Run" type="Transparent">
-          <layoutData>
-            <OverflowToolbarLayoutData priority="Low" />
-          </layoutData>
-        </Button>
-        <Button text="Tools" type="Transparent">
-          <layoutData>
-            <OverflowToolbarLayoutData priority="Low" />
-          </layoutData>
-        </Button>
+     
         <tnt:ToolHeaderUtilitySeparator />
         <ToolbarSpacer>
           <layoutData>
