@@ -1,8 +1,0 @@
-specVersion: '2.3'
-metadata:
-  name: myApp
-type: application
-resources:
-  configuration:
-    paths:
-      webapp: webapp
