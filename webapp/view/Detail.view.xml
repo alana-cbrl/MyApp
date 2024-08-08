@@ -57,11 +57,7 @@
     </tnt:sideContent>
     
       <tnt:mainContents>
-      <Page>
-        <content>
-          <Button text="Botão de alerta" press="onBotoDeAlertaButtonPress"/>
-        </content>
-      </Page>
+    
     </tnt:mainContents>
   
     </tnt:ToolPage>
