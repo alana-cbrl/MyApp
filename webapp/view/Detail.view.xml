@@ -56,9 +56,57 @@
       </tnt:SideNavigation>
     </tnt:sideContent>
     
-      <tnt:mainContents>
+       <tnt:mainContents>
+         <Page>
+            <content>
+              <Button text="Botão de alerta" press="onBotoDeAlertaButtonPress"/>
+            </content>
+            <Page title="Main">
+
+
+  <Table items="{/items}" itemPress="onListItemPress">
+            <columns>
+                <Column>
+                    <Text text="Informações"/>
+                </Column>
+                <Column>
+                    <Text text="Dados Pessoais"/>
+                </Column>
+            </columns>
+            <items>
     
-    </tnt:mainContents>
+                <ColumnListItem>
+                  <cells>
+                        <Input value="{Value1}" editable="{/editable}"/>
+                        <Input value="{Value2}" editable="{/editable}"/>
+                    </cells>
+
+                </ColumnListItem>
+   
+            </items>
+        </Table>
+     
+      	<customHeader>
+            <Bar>
+				<contentRight>
+					<Button id="edit" text="Edit" enabled="true" press="handleEditPress" />
+					<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress" />
+					<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />
+				</contentRight>
+			      </Bar>
+        </customHeader>
+
+
+       <content>
+       <Button text="Continuar..." press="onNavSecond"/>
+      </content>
+    
+
+
+    </Page>
+  </App>
+          </Page>
+        </tnt:mainContents>
   
-    </tnt:ToolPage>
+  </tnt:ToolPage>
 </mvc:View>
