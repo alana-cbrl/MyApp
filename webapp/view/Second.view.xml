@@ -15,7 +15,7 @@
 
        <MessagePage
      showHeader="true"
-      description="descrição do erro   "
+      description="descrição do erro"
       icon="sap-icon://documents"
       text="404 ERRO"/>
 

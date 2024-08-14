@@ -41,11 +41,10 @@
 			      </Bar>
         </customHeader>
 
-
-       <content>
-       <Button text="Continuar..." press="onNavSecond"/>
-       <Button text="voltar" press="onNavigateToDetail"/>
-      </content>
+          <content>
+           <Button text="Continuar..." press="onNavSecond"/>
+           <Button text="voltar" press="onNavigateToDetail"/>
+          </content>
     
 
 

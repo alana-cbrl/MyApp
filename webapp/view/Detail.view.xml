@@ -48,23 +48,22 @@
     <tnt:sideContent>
       <tnt:SideNavigation id="sideNavigation" expanded="true">
         <tnt:NavigationList>
-          <tnt:NavigationListItem text="teste 123">
-            <tnt:NavigationListItem text="item 1" press="onBotoDeAlertaButtonPress"/>
-            <tnt:NavigationListItem text="item 2"/>
+          <tnt:NavigationListItem text="teste 123" icon="sap-icon://employee">
+            <tnt:NavigationListItem text="item 1" press="onNavToMain"/>
+            <tnt:NavigationListItem text="item 2" press="onNavToSecond"/>
           </tnt:NavigationListItem>
         </tnt:NavigationList>
       </tnt:SideNavigation>
     </tnt:sideContent>
     
        <tnt:mainContents>
-         <Page>
+    
+            <Page title="Main">
             <content>
               <Button text="Botão de alerta" press="onBotoDeAlertaButtonPress"/>
             </content>
-            <Page title="Main">
 
-
-  <Table items="{/items}" itemPress="onListItemPress">
+         <Table items="{/items}" itemPress="onListItemPress">
             <columns>
                 <Column>
                     <Text text="Informações"/>
@@ -98,15 +97,28 @@
 
 
        <content>
-       <Button text="Continuar..." press="onNavSecond"/>
-      </content>
-    
+          <Button text="Continuar..." press="onNavSecond"/>
+       </content>
+      </Page>
 
+      
+    <Page title="Second">
+     
+    
+        <Button text="voltar" press="onNavBack"/>
+        <Button text="Ir para Página Principal" press="onNavigateToDetail"/>
+
+       <MessagePage
+     showHeader="true"
+      description="descrição do erro"
+      icon="sap-icon://documents"
+      text="404 ERRO"/>
+
+        
 
     </Page>
-  </App>
-          </Page>
-        </tnt:mainContents>
-  
+
+
+     </tnt:mainContents>
   </tnt:ToolPage>
 </mvc:View>
