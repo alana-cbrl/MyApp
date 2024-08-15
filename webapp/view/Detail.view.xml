@@ -94,11 +94,6 @@
 				</contentRight>
 			      </Bar>
         </customHeader>
-
-
-       <content>
-          <Button text="Continuar..." press="onNavSecond"/>
-       </content>
       </Page>
 
       
@@ -113,8 +108,6 @@
       description="descrição do erro"
       icon="sap-icon://documents"
       text="404 ERRO"/>
-
-        
 
     </Page>
 

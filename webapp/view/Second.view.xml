@@ -7,7 +7,7 @@
 	busyIndicatorDelay="0"
 >
 
-<Page title="segunda/terceira">
+<Page title="Second">
      
     
         <Button text="voltar" press="onNavBack"/>
