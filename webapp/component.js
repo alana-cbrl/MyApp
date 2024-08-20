@@ -1,24 +1,24 @@
 sap.ui.define([
-    "sap/ui/core/UIComponent",
-    "sap/ui/Device",
-    "myApp/model/models"
+"sap/ui/core/UIComponent",
+"sap/ui/Device",
+"myApp/model/models"
 ], function (UIComponent, Device, models) {
-    "use strict";
+"use strict";
 
-    return UIComponent.extend("myApp.Component", {
-        metadata: {
-            manifest: "json"
-        },
+return UIComponent.extend("myApp.Component", {
+    metadata: {
+        manifest: "json"
+    },
 
-        init: function () {
-            // call the base component's init function
-            UIComponent.prototype.init.apply(this, arguments);
+    init: function () {
+    
+        UIComponent.prototype.init.apply(this, arguments);
 
-            // create the views based on the url/hash
-            this.getRouter().initialize();
+        
+        this.getRouter().initialize();
 
-            // set the device model
-            this.setModel(models.createDeviceModel(), "device");
-        }
-    });
+        
+        this.setModel(models.createDeviceModel(), "device");
+    }
+});
 });

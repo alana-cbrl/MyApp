@@ -6,49 +6,49 @@ xmlns="sap.m">
 
 
 
-  <Page title="Main">
+<Page title="Main">
 
 
 <Table items="{/items}" itemPress="onListItemPress">
-          <columns>
-              <Column>
-                  <Text text="Informações"/>
-              </Column>
-              <Column>
-                  <Text text="Dados Pessoais"/>
-              </Column>
-          </columns>
-          <items>
+        <columns>
+            <Column>
+                <Text text="Informações"/>
+            </Column>
+            <Column>
+                <Text text="Dados Pessoais"/>
+            </Column>
+        </columns>
+        <items>
+
+            <ColumnListItem>
+              <cells>
+                    <Input value="{Value1}" editable="{/editable}"/>
+                    <Input value="{Value2}" editable="{/editable}"/>
+                </cells>
+
+            </ColumnListItem>
+
+        </items>
+    </Table>
   
-              <ColumnListItem>
-                <cells>
-                      <Input value="{Value1}" editable="{/editable}"/>
-                      <Input value="{Value2}" editable="{/editable}"/>
-                  </cells>
+    <customHeader>
 
-              </ColumnListItem>
-  
-          </items>
-      </Table>
-    
-      <customHeader>
+        <Bar>
+    <contentRight>
+      <Button id="edit" text="Edit" enabled="true" press="handleEditPress" />
+      <Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress" />
+      <Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />
+    </contentRight>
+      </Bar>
+    </customHeader>
 
-          <Bar>
-      <contentRight>
-        <Button id="edit" text="Edit" enabled="true" press="handleEditPress" />
-        <Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress" />
-        <Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />
-      </contentRight>
-        </Bar>
-      </customHeader>
-
-        <content>
-          <Button text="Continuar..." press="onNavSecond"/>
-          <Button text="voltar" press="onNavigateToDetail"/>
-        </content>
-  
+      <content>
+        <Button text="Continuar..." press="onNavSecond"/>
+        <Button text="voltar" press="onNavigateToDetail"/>
+      </content>
 
 
-  </Page>
+
+</Page>
 </App>
 </mvc:View>

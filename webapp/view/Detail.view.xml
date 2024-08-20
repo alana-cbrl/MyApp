@@ -1,117 +1,117 @@
 <mvc:View
-  controllerName="myApp.controller.Detail"
-  displayBlock="true"
-  xmlns:mvc="sap.ui.core.mvc"
-  xmlns="sap.m"
-  xmlns:tnt="sap.tnt">
-  
-  <tnt:ToolPage id="ToolPage">
+controllerName="myApp.controller.Detail"
+displayBlock="true"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+xmlns:tnt="sap.tnt">
 
-    <tnt:header>
-      <tnt:ToolHeader>
+<tnt:ToolPage id="ToolPage">
 
-        <Button
-          id="sideNavigationToggleButton"
-          icon="sap-icon://menu2"
-          type="Transparent"
-          press=".onSideNavButtonPress"
-          expanded="true"
-          >
-          <layoutData>
-            <OverflowToolbarLayoutData priority="NeverOverflow" />
-          </layoutData>
-        </Button>
+  <tnt:header>
+    <tnt:ToolHeader>
 
-        <ToolbarSpacer width="20px" />
-        
-        <Button text="Primeira Página" type="Transparent" press="onNavBack">
-          <layoutData>
-            <OverflowToolbarLayoutData priority="Low" />
-          </layoutData>
-        </Button>
+      <Button
+        id="sideNavigationToggleButton"
+        icon="sap-icon://menu2"
+        type="Transparent"
+        press=".onSideNavButtonPress"
+        expanded="true"
+        >
+        <layoutData>
+          <OverflowToolbarLayoutData priority="NeverOverflow" />
+        </layoutData>
+      </Button>
 
-        <Button text="Segunda página" type="Transparent" press="onNavSecond">
-          <layoutData>
-            <OverflowToolbarLayoutData priority="Low" />
-          </layoutData>
-        </Button>
-     
-        <tnt:ToolHeaderUtilitySeparator />
-        <ToolbarSpacer>
-          <layoutData>
-            <OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px" />
-          </layoutData>
-        </ToolbarSpacer>
-      </tnt:ToolHeader>
-    </tnt:header>
-
-    <tnt:sideContent>
-      <tnt:SideNavigation id="sideNavigation" expanded="true">
-        <tnt:NavigationList>
-          <tnt:NavigationListItem text="teste 123" icon="sap-icon://employee">
-            <tnt:NavigationListItem text="item 1" press="onNavToMain"/>
-            <tnt:NavigationListItem text="item 2" press="onNavToSecond"/>
-          </tnt:NavigationListItem>
-        </tnt:NavigationList>
-      </tnt:SideNavigation>
-    </tnt:sideContent>
-    
-       <tnt:mainContents>
-    
-            <Page title="Main">
-            <content>
-              <Button text="Botão de alerta" press="onBotoDeAlertaButtonPress"/>
-            </content>
-
-         <Table items="{/items}" itemPress="onListItemPress">
-            <columns>
-                <Column>
-                    <Text text="Informações"/>
-                </Column>
-                <Column>
-                    <Text text="Dados Pessoais"/>
-                </Column>
-            </columns>
-            <items>
-    
-                <ColumnListItem>
-                  <cells>
-                        <Input value="{Value1}" editable="{/editable}"/>
-                        <Input value="{Value2}" editable="{/editable}"/>
-                    </cells>
-
-                </ColumnListItem>
-   
-            </items>
-        </Table>
-     
-      	<customHeader>
-            <Bar>
-				<contentRight>
-					<Button id="edit" text="Edit" enabled="true" press="handleEditPress" />
-					<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress" />
-					<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />
-				</contentRight>
-			      </Bar>
-        </customHeader>
-      </Page>
-
+      <ToolbarSpacer width="20px" />
       
-    <Page title="Second">
-     
+      <Button text="Primeira Página" type="Transparent" press="onNavBack">
+        <layoutData>
+          <OverflowToolbarLayoutData priority="Low" />
+        </layoutData>
+      </Button>
+
+      <Button text="Segunda página" type="Transparent" press="onNavSecond">
+        <layoutData>
+          <OverflowToolbarLayoutData priority="Low" />
+        </layoutData>
+      </Button>
     
-        <Button text="voltar" press="onNavBack"/>
-        <Button text="Ir para Página Principal" press="onNavigateToDetail"/>
+      <tnt:ToolHeaderUtilitySeparator />
+      <ToolbarSpacer>
+        <layoutData>
+          <OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px" />
+        </layoutData>
+      </ToolbarSpacer>
+    </tnt:ToolHeader>
+  </tnt:header>
 
-       <MessagePage
-     showHeader="true"
-      description="descrição do erro"
-      icon="sap-icon://documents"
-      text="404 ERRO"/>
+  <tnt:sideContent>
+    <tnt:SideNavigation id="sideNavigation" expanded="true">
+      <tnt:NavigationList>
+        <tnt:NavigationListItem text="teste 123" icon="sap-icon://employee">
+          <tnt:NavigationListItem text="item 1" press="onNavToMain"/>
+          <tnt:NavigationListItem text="item 2" press="onNavToSecond"/>
+        </tnt:NavigationListItem>
+      </tnt:NavigationList>
+    </tnt:SideNavigation>
+  </tnt:sideContent>
+  
+      <tnt:mainContents>
+  
+          <Page title="Main">
+          <content>
+            <Button text="Botão de alerta" press="onBotoDeAlertaButtonPress"/>
+          </content>
 
+        <Table items="{/items}" itemPress="onListItemPress">
+          <columns>
+              <Column>
+                  <Text text="Informações"/>
+              </Column>
+              <Column>
+                  <Text text="Dados Pessoais"/>
+              </Column>
+          </columns>
+          <items>
+  
+              <ColumnListItem>
+                <cells>
+                      <Input value="{Value1}" editable="{/editable}"/>
+                      <Input value="{Value2}" editable="{/editable}"/>
+                  </cells>
+
+              </ColumnListItem>
+  
+          </items>
+      </Table>
+    
+      <customHeader>
+          <Bar>
+      <contentRight>
+        <Button id="edit" text="Edit" enabled="true" press="handleEditPress" />
+        <Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress" />
+        <Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />
+      </contentRight>
+          </Bar>
+      </customHeader>
     </Page>
 
+    
+  <Page title="Second">
+    
+  
+      <Button text="voltar" press="onNavBack"/>
+      <Button text="Ir para Página Principal" press="onNavigateToDetail"/>
 
-     </tnt:mainContents>
-  </tnt:ToolPage>
+      <MessagePage
+    showHeader="true"
+    description="descrição do erro"
+    icon="sap-icon://documents"
+    text="404 ERRO"/>
+
+  </Page>
+
+
+    </tnt:mainContents>
+</tnt:ToolPage>
 </mvc:View>
