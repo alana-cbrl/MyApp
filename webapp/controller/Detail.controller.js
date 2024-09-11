@@ -1,6 +1,7 @@
 sap.ui.define([
-  "sap/ui/core/mvc/Controller"
-], function (Controller) {
+  "sap/ui/core/mvc/Controller",
+  "sap/m/MessageToast"
+], function (Controller, MessageToast) {
   "use strict";
 
   return Controller.extend("myApp.controller.Detail", {
@@ -14,11 +15,9 @@ sap.ui.define([
       oRouter.navTo("Second");
     },
 
-
-    onBotoDeAlertaButtonPress: function() {
-      sap.m.MessageToast.show("Alerta!");
-    },
-
-
+    onButtonPress: function() {
+      var randomNumber = Math.floor(Math.random() * 100) + 1;
+      MessageToast.show("Número gerado: " + randomNumber);
+    }
   });
 });

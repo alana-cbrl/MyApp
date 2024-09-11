@@ -82,7 +82,7 @@
       <tnt:mainContents>
       <Page>
         <content>
-          <Button text="Botão de alerta" press="onBotoDeAlertaButtonPress"/>
+          <Button text="Botão número aleatório" press="onButtonPress"/>
         </content>
       </Page>
     </tnt:mainContents>
